@@ -4,16 +4,19 @@ import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router-dom";
 
 import "dashboard/assets/css/material-dashboard-react.css?v=1.5.0";
-import IndexPage from "clients/Index";
-import Dashboard from "dashboard/layouts/Dashboard/Dashboard.jsx";
 
-const history = createBrowserHistory();
+import indexRoutes from "./routes/index.jsx";
+import IndexPage from "./clients/Index";
+
+const hist = createBrowserHistory();
 
 ReactDOM.render(
-  <Router history={history}>
+  <Router history={hist}>
     <Switch>
-      <Route exact path='/' component={IndexPage}/>
-      <Route exact path='/dashboard' component={Dashboard}/>
+      <Route exact path="/" component={IndexPage} />
+      {indexRoutes.map((prop, key) => {
+        return <Route path={prop.path} component={prop.component} key={key} />;
+      })}
     </Switch>
   </Router>,
   document.getElementById("app")

@@ -18,9 +18,6 @@ import dashboardStyle from "dashboard/assets/jss/material-dashboard-react/layout
 
 import image from "dashboard/assets/img/sidebar-2.jpg";
 import logo from "dashboard/assets/img/reactlogo.png";
-// core components/views
-import DashboardPage from "dashboard/views/Dashboard/Dashboard.jsx";
-import UserProfile from "dashboard/views/UserProfile/UserProfile.jsx";
 
 const switchRoutes = (
   <Switch>

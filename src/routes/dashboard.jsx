@@ -26,14 +26,14 @@ const dashboardRoutes = [
     component: DashboardPage
   },
   {
-    path: "/dashboard/user",
+    path: "/admin/user",
     sidebarName: "User Profile",
     navbarName: "Profile",
     icon: Person,
     component: UserProfile
   },
   {
-    path: "/dashboard/table",
+    path: "/admin/table",
     sidebarName: "Table List ",
     navbarName: "Table List",
     icon: "content_paste",
